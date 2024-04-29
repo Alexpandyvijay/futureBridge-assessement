@@ -1,0 +1,51 @@
+.App {
+  width: 100%;
+  height: 100vh;
+}
+
+.accordion {
+  height: max-content;
+  padding: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+
+  & > .accordion-row {
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 6px 5px 5px rgb(0, 0, 0, 0.1);
+    background-color: azure;
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    grid-template-rows: max-content max-content;
+
+    & > .accordion-header {
+      font-size: 120%;
+      font-weight: 500;
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+    }
+    & > .accordion-body {
+      font-size: 80%;
+      padding: 20px;
+      grid-column: 1 / 3;
+      grid-row: 2 / 3;
+    }
+
+    & > .rotate-icon {
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
+      font-size: 150%;
+      font-weight: 400;
+    }
+
+    & > .rotate-action {
+      transform: rotate(180deg);
+    }
+
+  }
+}
